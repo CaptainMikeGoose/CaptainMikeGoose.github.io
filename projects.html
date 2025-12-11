@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Michael Siragusa</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-left">
-            <h1>Michael A. Siragusa</h1>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Michael Siragusa</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="index.html#contact">Contact</a>
         </div>
-        <div class="nav-right">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About Me</a>
-        </div>
-    </nav>
-    <div id="content">
-        <h2>Projects</h2>
-        <p>Projects go here.</p>
+      </nav>
     </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1>Projects</h1>
+
+      <!-- Stacked list instead of 2x2 grid(unlike featured) -->
+      <div class="projects-list">
+        <article id="p1" class="card project-card">
+          <h3>Project 1</h3>
+          <p><a class="btn btn-primary" href="#">GitHub</a></p>
+        </article>
+
+        <article id="p2" class="card project-card">
+          <h3>Project 2</h3>
+          <p><a class="btn btn-primary" href="#">GitHub</a></p>
+        </article>
+
+        <article id="p3" class="card project-card">
+          <h3>Project 3</h3>
+          <p><a class="btn btn-primary" href="#">GitHub</a></p>
+        </article>
+
+        <article id="p4" class="card project-card">
+          <h3>Project 4</h3>
+          <p><a class="btn btn-primary" href="#">GitHub</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

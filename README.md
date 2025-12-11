@@ -1,1 +1,1 @@
-Read Me file for the project.
+This is my portfolio webiste aimed to represent my skills and projects.

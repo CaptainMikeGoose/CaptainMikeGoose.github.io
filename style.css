@@ -1,121 +1,180 @@
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: #1C2321;
-    padding: 10px 20px;
-    color: #E6C79C;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    box-sizing: border-box; /* Ensure padding doesn't make it overflow */
-    overflow: hidden; /* Prevent any content from overflowing */
+/* ===== Color System (dark industrial, static) ===== */
+:root{ 
+    --bg: #2B3537;          /* Gunmetal */
+    --ink: #F0DBC3;         /* Dutch White */
+    --muted: #C9C9C9;       /* Secondary text */
+    --accent: #B0323A;      /* Sweet Brown */
+    --accent-2: #C87C0C;    /* Mustard Brown */
+
+    --maxw: 1100px;
+    --radius: 14px;
+    --shadow: 0 2px 10px rgba(0,0,0,.25);
 }
 
-.nav-left h1 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #EEF1EF;
+*{
+    box-sizing:border-box;
 }
 
-.nav-right a {
-    color: #EEF1EF;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.1em;
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font:16px/1.6 system-ui, Segoe UI, Inter, Arial, sans-serif;
 }
 
-.nav-right a:hover {
-    color: #A9B4C2;
+.container{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 20px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #E6C79C;
-    color: #1C2321;
+/* Header / Nav */
+header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:#222B2D;
+    color:var(--ink);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-#content {
-    margin-top: 70px;
-    padding: 20px;
-    background-color: #E6C79C;
-    border: 1px solid #7D98A1;
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 0;
 }
 
-/* About Me Page Specific Styles */
-/* General Layout */
-.about-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+.brand{
+    font-size: 1.3rem;
+    font-weight:800;
+    letter-spacing:.5px;
 }
 
-.about-content {
-    margin-top: 80px; /* Leave space for navbar */
-    padding: 20px;
-    max-width: 900px; /* Restrict content width for alignment */
-    margin-left: auto;
-    margin-right: auto;
-}
-.about-heading {
-    text-align: center; /* Center the heading horizontally */
-    margin: 0 auto; /* Ensure no extra margin on the sides */
-    padding-bottom: 20px; /* Add some spacing below the heading */
-    font-size: 1.8em; 
-    color: #1C2321;
+.nav-links a{
+    color:var(--ink);
+    text-decoration:none;
+    margin-left:18px;
+    font-weight:600;
 }
 
-/* About Me Page */
-.about-container {
-    display: flex;
-    flex-direction: row; /* Align items horizontally */
-    justify-content: space-between; /* Space between image and text */
-    align-items: center; /* Vertically align items */
-    gap: 20px; /* Add spacing between image and text */
-    border: 2px solid #7D98A1; /* Outer border for the section */
-    padding: 20px;
-    background-color: #f0f0f0; /* Light gray background for the section */
+.nav-links a:hover{
+    color:var(--accent-2);
 }
 
-.about-image {
-    flex: 1; /* Ensure image takes equal space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #A9B4C2; /* Light gray background for image area */
-    padding: 10px;
-    border: 2px solid #5E6572; /* Border around the image area */
+/* Hero */
+.hero{
+    padding:70px 0 80px;
+    background:
+        repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 1px, transparent 1px 60px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 60px),
+    #2B3537;
 }
-.about-image img {
-    max-width: 100%;
-    max-height: 300px; /* Ensure image height doesn't overflow */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px;
+
+.kicker{
+    color:var(--muted);
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:.85rem;
+}
+
+h1{
+    margin:8px 0 16px;
+    font-size:clamp(28px,4vw,44px);
+}
+
+.lead{
+    color:var(--muted);
+    max-width:60ch;
+}
+
+/* Buttons */
+.actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:24px;
+}
+
+.btn{
+    display:inline-block;
+    padding:10px 16px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:700;
     }
 
-.about-text {
-    flex: 1; /* Ensure text takes equal space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #A9B4C2; /* Background for text zone */
-    padding: 15px;
-    border: 2px solid #7D98A1; /* Border around the text area */
-    text-align: center; /* Center text horizontally */
-    max-width: 100%;
-    color: #1C2321;
+.btn-primary{
+    background:var(--accent);
+    color:#fff;
 }
 
-/* Bottom Section for Additional Info */
-.about-description {
-    margin-top: 20px; /* Add space between sections */
-    text-align: center;
-    border: 2px solid #7D98A1; /* Border for bottom section */
-    padding: 10px;
-    background-color: #E6C79C; /* White background */
-    color: #1C2321;
+.btn-primary:hover{
+    background:var(--accent-2);
+}
+
+.btn-ghost{
+    border:2px solid var(--ink);
+    color:var(--ink);
+}
+
+/* Sections & Cards */
+.section{
+    padding:48px 0;
+}
+
+.grid{
+    display:grid;
+    gap:20px;
+}
+
+.grid-2{
+    grid-template-columns:1fr;
+}
+
+@media(min-width:900px){
+    .grid-2{
+        grid-template-columns:1fr 1fr;
+  }
+}
+
+.card{
+    background:#fff;
+    color:#222;
+    border:1px solid rgba(0,0,0,.06);
+    border-radius:14px;
+    padding:18px;
+    box-shadow:var(--shadow);
+}
+
+.card-link{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* Projects page list */
+.projects-list{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer{
+    background:#222B2D;
+    color:var(--ink);
+    padding:28px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    }
+
+footer small{
+    font-size:.85rem;
 }
