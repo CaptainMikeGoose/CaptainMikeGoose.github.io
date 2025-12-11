@@ -1,27 +1,74 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Michael Siragusa</title>
+  <meta name="description" content="Portfolio of Michael Siragusa." />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-left">
-            <h1>Michael A. Siragusa</h1> 
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Michael A. Siragusa</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div class="nav-right">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About Me</a>
-        </div>
-    </nav>
-
-    <div id="content">
-        <h2>Welcome to My Portfolio</h2>
-        <p>This is the home section for something cool</p>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="kicker">Computer Science · Data Science · Etc. </div>
+        <h1>I Am Michael Siragusa</h1>
+        <p class="lead">
+          I am Michael Siragusa AKA Sly McCool. I am a Computer Science student ......... 
+          and also a radical dude. Rest of description.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="projects.html">View Projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>
+              <a>Project 1</a>
+            </h3>
+            <p>Description</p>
+          </article>
+          <article class="card">
+            <h3>
+              <a>Project 2</a>
+            </h3>
+            <p>Extedned Description</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="card">
+          <p><a href="mailto:@email">@email.com</a></p>
+          <p><a href="https://github.com/CaptainMikeGoose">github.com/CaptainMikeGoose</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
